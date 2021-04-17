@@ -1,8 +1,8 @@
 import joblib
 import streamlit as st
-model = joblib.load('sentiment_analysis')
-st.title('Sentiment Classifier')
-ip = st.text_input('Enter your message : ')
+model = joblib.load('review_sentiment_analysis')
+st.title('Review Analysis')
+ip = st.text_input('Enter your review : ')
 op = model.predict([ip])
-if st.button('Predict'):
+if st.button('Analyse'):
   st.title(op[0])
