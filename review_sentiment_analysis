@@ -1,6 +1,0 @@
-from sklearn.linear_model import LogisticRegression
-from sklearn.pipeline import Pipeline
-from sklearn.feature_extraction.text import TfidfVectorizer
-
-#since its a binary classification(positive or negative) logistic reg is used
-text_model = Pipeline([('Tfidf',TfidfVectorizer()),('model',LogisticRegression())])
